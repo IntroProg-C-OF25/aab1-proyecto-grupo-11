@@ -28,8 +28,10 @@ import java.util.Scanner;
 public class Mejor_egresad0UTPL {
 
     public static void main(String[] args) {
+        // iniciamos el escaner 
         Scanner tcl = new Scanner(System.in);
         System.out.print("Ingrese cuantos estudiantes son: ");
+        // declaracion de variables
         int numEstudiantes = tcl.nextInt();
         tcl.nextLine();
 
@@ -37,17 +39,18 @@ public class Mejor_egresad0UTPL {
         double mejorPromedio = -1;
         String segundoMejorEgresado = "";
         double segundoMejorPromedio = -1;
-
+        // inicializamos el contador 
         int cont = 0;
+        // iniciamos el ciclo do- while
         do {
             System.out.println("Estudiante #" + (cont + 1) + ":");
             System.out.print("Nombre: ");
             String nombre = tcl.nextLine();
-
+            // promedio final del estudiante
             System.out.print("Promedio final del estudiante: ");
             double promedio = tcl.nextDouble();
             tcl.nextLine();
-
+            // condicional if para saber el mejor promedio
             if (promedio > mejorPromedio) {
                 segundoMejorPromedio = mejorPromedio;
                 segundoMejorEgresado = mejorEgresado;
@@ -58,10 +61,10 @@ public class Mejor_egresad0UTPL {
                 segundoMejorEgresado = nombre;
             }
             cont++;
-        } while (cont < numEstudiantes);
-
+        } while (cont < numEstudiantes); // finaliza el ciclo do-while
+        // Resultados finales de los estudiantes
         System.out.println("Resultados: ");
-
+        // condicional if para saber los dos estudiantes mejores egresados
         if (mejorPromedio == segundoMejorPromedio) {
             System.out.println("Existen dos mejores egresados: ");
             System.out.println("1. " + mejorEgresado + " con promedio " + mejorPromedio);
@@ -70,24 +73,15 @@ public class Mejor_egresad0UTPL {
             System.out.println("El mejor estudiante egresado es: ");
             System.out.println("1. " + mejorEgresado + " con promedio " + mejorPromedio);
         }
-        
+
     }
 }
-/***
- * Ingrese cuantos estudiantes son: 4
-Estudiante #1:
-Nombre: Hans
-Promedio final del estudiante: 9,8
-Estudiante #2:
-Nombre: Javier
-Promedio final del estudiante: 9,7
-Estudiante #3:
-Nombre: Juan
-Promedio final del estudiante: 9,7
-Estudiante #4:
-Nombre: Julian
-Promedio final del estudiante: 9,6
-Resultados: 
-El mejor estudiante egresado es: 
-1. Hans con promedio 9.8
+
+/**
+ * *
+ * RUN Ingrese cuantos estudiantes son: 4 Estudiante #1: Nombre: Hans Promedio
+ * final del estudiante: 9,8 Estudiante #2: Nombre: Javier Promedio final del
+ * estudiante: 9,7 Estudiante #3: Nombre: Juan Promedio final del estudiante:
+ * 9,7 Estudiante #4: Nombre: Julian Promedio final del estudiante: 9,6
+ * Resultados: El mejor estudiante egresado es: 1. Hans con promedio 9.8
  */
